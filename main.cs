@@ -17,19 +17,19 @@ class MainClass {
     {
         var random = new Random();
 
-        var a = new List<int>(size);
-        var b = new List<int>(size);
+        // var a = new List<int>(size);
+        // var b = new List<int>(size);
 
-        for (int i = 0; i < size; i++)
-        {
-            a.Add(random.Next(100, 1000));
-            b.Add(random.Next(100, 1000));
-        }
+        // for (int i = 0; i < size; i++)
+        // {
+        //     a.Add(random.Next(100, 1000));
+        //     b.Add(random.Next(100, 1000));
+        // }
 
         for (int i = 0; i < size; i++)
         {
             Thread.Sleep(50);
-            yield return a[i] * b[i];
+            yield return random.Next(100, 1000) * random.Next(100, 1000);
         }
     }  
 }
